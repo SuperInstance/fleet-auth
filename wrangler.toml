@@ -1,0 +1,19 @@
+name = "fleet-auth"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fleet-auth-db"
+database_id = "b3b8c982-336a-4bde-9abd-185a3c057d6e"
+
+[[kv_namespaces]]
+binding = "AUTH_KV"
+id = "879cd6e860744ff8a3b90fcd8b9273a0"
+
+[vars]
+WORKER_NAME = "fleet-auth"
+
+# Set via `wrangler secret put`:
+# JWT_SECRET_CURRENT
+# JWT_SECRET_PREVIOUS
